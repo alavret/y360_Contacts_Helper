@@ -8,7 +8,6 @@ log.log
 *.vsix
 *.log
 *.txt
-!requirements.txt
 *.bak
 *.zip
 envVars.txt
@@ -62,9 +61,9 @@ python-env-tools/**
 *.md
 *.pdf
 *.html
-*.py
 *.vcf
 !README.md
 !search_aliases.txt
 !fields_spec.txt
 !users.csv
+!requirements.txt
