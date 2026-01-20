@@ -70,8 +70,6 @@
 | directory:read_users | читать атрибуты пользователей |
 | ya360_admin:mail_read_user_settings  | Читать настройки почты польльзователей |
 | ya360_admin:mail_write_user_settings | Изменять настройки почты пользователей |
-| ya360_security:service_applications_read | чтение списка сервисных приложений |
-| ya360_security:service_applications_write | управление списком сервисных приложений |
 
 <img src="images/create_app_new_3.jpg" width="600">
 
