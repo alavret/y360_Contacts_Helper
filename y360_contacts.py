@@ -36,6 +36,8 @@ EXIT_CODE = 1
 # Необходимые права доступа для работы скрипта
 NEEDED_PERMISSIONS = [
     "directory:read_users",
+    "ya360_admin:mail_read_user_settings",
+    "ya360_admin:mail_write_user_settings",
 ]
 
 logger = logging.getLogger(LOG_FILE)
@@ -868,11 +870,7 @@ def delete_contacts_by_email_patterns(
                 etag = vcard.get("etag")
                 updated_count = 0
                 removed_count = 0
-                if (
-                    len(emails_in_card) == 1
-                    and len(emails_to_remove) == 1
-                    and emails_in_card[0] in emails_to_remove
-                ):
+                if len(emails_to_remove) == len(emails_in_card):
                     removed_count = _delete_contact_vcard(
                         settings=settings,
                         session=session,
